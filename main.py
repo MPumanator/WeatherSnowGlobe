@@ -12,7 +12,7 @@ led1 = 27
 io.setup(led1, io.OUT)
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(button_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-io.output(led1, True)
+
 
 class Timer:
     value = 0
@@ -74,7 +74,10 @@ def get_input():
 def update_display(weather_to_display):
     print(f"{current_weather_displayed} - {weather_to_display['time']}: {weather_to_display['weather']}")
     #print_servo(servo_2, (weather_to_display["weather"]))
-    if ("weather" == "snow")
+    if ("weather" == "snow"):
+        io.output(led1, True)
+    else:
+        io.output(led1, False)
 
 
 if __name__ == '__main__':
