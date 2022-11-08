@@ -75,8 +75,10 @@ def update_display(weather_to_display):
     print(f"{current_weather_displayed} - {weather_to_display['time']}: {weather_to_display['weather']}")
     #print_servo(servo_2, (weather_to_display["weather"]))
     if ("weather" == "snow"):
+        print("Snowing")
         io.output(led1, True)
     else:
+        print("No Snow")
         io.output(led1, False)
 
 
